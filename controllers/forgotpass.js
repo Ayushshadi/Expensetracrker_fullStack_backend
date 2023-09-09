@@ -7,7 +7,7 @@ const Brevo = require('sib-api-v3-sdk');
       
 const defaultClient = Brevo.ApiClient.instance;
 const apiKey = defaultClient.authentications['api-key'];
-apiKey.apiKey = 'xsmtpsib-1754edafc7927bdd61618d68bba9836e5bbd92642cde6378c661e40e78acb4be-VDx98WUjqHMJQF0d' ;
+apiKey.apiKey = ;
 console.log(apiKey.apiKey)
 const apiInstance = new Brevo.TransactionalEmailsApi();
 exports.forgotpassword = async (req, res) => {
