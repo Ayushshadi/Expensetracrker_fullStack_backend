@@ -7,7 +7,7 @@ const bcrypt = require("bcryptjs");
 // generating the JWT tocken using the id and useremail id 
 
 const generateAccessToken = (id, email) => {
-  const secretKey ='AyushShadi';
+  const secretKey =;
   const payload = { userId: id, email };
   return jwt.sign(payload, secretKey, { expiresIn: "24h" });
 };
