@@ -12,12 +12,12 @@ const User = require("../models/user");
 exports.getPremium = async (req, res)=>{
   try{
     const token = req.header("Authorization");
-    const user = jwt.verify(token,'AyushShadi');
+    const user = jwt.verify(token,'');
     let id = user.userId;
     const payuser = await User.findByPk(id);
     const rzp = new Razorpay({
-      key_id :'rzp_test_2Rk82zLDiRZ1uh',
-      key_secret :'1ZeHxn6qvK6X2UOTBg648S29',
+      key_id :,
+      key_secret :',
     })
     
     const  amount = 250;
@@ -51,7 +51,7 @@ exports.getPremium = async (req, res)=>{
 exports.updateTransactionStatus =async (req ,res)=>{
   try{
     const token = req.header("Authorization");
-    const user = jwt.verify(token,'AyushShadi');
+    const user = jwt.verify(token');
     let id = user.userId;
     const payuser = await User.findByPk(id);
     const {order_id ,payment_id} = req.body;
